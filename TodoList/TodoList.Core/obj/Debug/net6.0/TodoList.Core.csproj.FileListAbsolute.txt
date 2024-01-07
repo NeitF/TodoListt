@@ -1,0 +1,14 @@
+C:\Users\nafs2\Documents\Git\TodoListt\TodoList\TodoList.Core\obj\Debug\net6.0\TodoList.Core.csproj.AssemblyReference.cache
+C:\Users\nafs2\Documents\Git\TodoListt\TodoList\TodoList.Core\obj\Debug\net6.0\TodoList.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nafs2\Documents\Git\TodoListt\TodoList\TodoList.Core\obj\Debug\net6.0\TodoList.Core.AssemblyInfoInputs.cache
+C:\Users\nafs2\Documents\Git\TodoListt\TodoList\TodoList.Core\obj\Debug\net6.0\TodoList.Core.AssemblyInfo.cs
+C:\Users\nafs2\Documents\Git\TodoListt\TodoList\TodoList.Core\obj\Debug\net6.0\TodoList.Core.csproj.CoreCompileInputs.cache
+C:\Users\nafs2\Documents\Git\TodoListt\TodoList\TodoList.Core\bin\Debug\net6.0\TodoList.Core.deps.json
+C:\Users\nafs2\Documents\Git\TodoListt\TodoList\TodoList.Core\bin\Debug\net6.0\TodoList.Core.runtimeconfig.json
+C:\Users\nafs2\Documents\Git\TodoListt\TodoList\TodoList.Core\bin\Debug\net6.0\TodoList.Core.dll
+C:\Users\nafs2\Documents\Git\TodoListt\TodoList\TodoList.Core\bin\Debug\net6.0\TodoList.Core.pdb
+C:\Users\nafs2\Documents\Git\TodoListt\TodoList\TodoList.Core\obj\Debug\net6.0\TodoList.Core.dll
+C:\Users\nafs2\Documents\Git\TodoListt\TodoList\TodoList.Core\obj\Debug\net6.0\refint\TodoList.Core.dll
+C:\Users\nafs2\Documents\Git\TodoListt\TodoList\TodoList.Core\obj\Debug\net6.0\TodoList.Core.pdb
+C:\Users\nafs2\Documents\Git\TodoListt\TodoList\TodoList.Core\obj\Debug\net6.0\TodoList.Core.genruntimeconfig.cache
+C:\Users\nafs2\Documents\Git\TodoListt\TodoList\TodoList.Core\obj\Debug\net6.0\ref\TodoList.Core.dll
