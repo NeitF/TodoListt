@@ -39,7 +39,7 @@ cd .\TodoList.API\
 dotnet run
 ```
 Acesse a o swagger pelo link: https://localhost:7139/swagger/index.html
-8.  Execute a aplicação console com
+> 8.  Execute a aplicação console com
 ```bash
 cd .\TodoList.Console\
 dotnet run
