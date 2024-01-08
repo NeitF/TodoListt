@@ -23,12 +23,12 @@ public class ConsoleProgram
         var serviceProvider = services.BuildServiceProvider(); 
         var context = serviceProvider.GetService<TodoListContext>();
         
-        Console.WriteLine($"Sistema Operacional: {RuntimeInformation.OSDescription}");
-        Console.WriteLine("Lista de tarefas a fazer\n");
-
         while (true)
         {
             Console.Clear();
+            Console.WriteLine($"Sistema Operacional: {RuntimeInformation.OSDescription}");
+            Console.WriteLine("Lista de tarefas a fazer\n");
+
             ExibirMenu();
             Enum.TryParse(Console.ReadLine(), true, out OpcaoMenuEnum opcao);
             ProcessarEscolha(opcao, context);
@@ -152,6 +152,6 @@ public class ConsoleProgram
         var todosOsItens = context.TodoItems.ToList();
 
         foreach (var item in todosOsItens)
-            Console.WriteLine($"========\n{item.Id}\n{item.Descricao}\n{item.IsCompleto}\n========");
+            Console.WriteLine($"========\nID: {item.Id}\nDESCRICAO: {item.Descricao}\nCOMPLETA: {item.IsCompleto}\n========");
     }
 }
