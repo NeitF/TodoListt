@@ -4,6 +4,88 @@
     "C:\\Users\\nafs2\\Documents\\Git\\TodoListt\\TodoList\\TodoList.Console\\TodoList.Console.csproj": {}
   },
   "projects": {
+    "C:\\Users\\nafs2\\Documents\\Git\\TodoListt\\TodoList\\TodoList.API\\TodoList.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\nafs2\\Documents\\Git\\TodoListt\\TodoList\\TodoList.API\\TodoList.API.csproj",
+        "projectName": "TodoList.API",
+        "projectPath": "C:\\Users\\nafs2\\Documents\\Git\\TodoListt\\TodoList\\TodoList.API\\TodoList.API.csproj",
+        "packagesPath": "C:\\Users\\nafs2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nafs2\\Documents\\Git\\TodoListt\\TodoList\\TodoList.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nafs2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\nafs2\\Documents\\Git\\TodoListt\\TodoList\\TodoList.Core\\TodoList.Core.csproj": {
+                "projectPath": "C:\\Users\\nafs2\\Documents\\Git\\TodoListt\\TodoList\\TodoList.Core\\TodoList.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\nafs2\\Documents\\Git\\TodoListt\\TodoList\\TodoList.Console\\TodoList.Console.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -12,6 +94,65 @@
         "projectPath": "C:\\Users\\nafs2\\Documents\\Git\\TodoListt\\TodoList\\TodoList.Console\\TodoList.Console.csproj",
         "packagesPath": "C:\\Users\\nafs2\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\nafs2\\Documents\\Git\\TodoListt\\TodoList\\TodoList.Console\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nafs2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\nafs2\\Documents\\Git\\TodoListt\\TodoList\\TodoList.API\\TodoList.API.csproj": {
+                "projectPath": "C:\\Users\\nafs2\\Documents\\Git\\TodoListt\\TodoList\\TodoList.API\\TodoList.API.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\nafs2\\Documents\\Git\\TodoListt\\TodoList\\TodoList.Core\\TodoList.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\nafs2\\Documents\\Git\\TodoListt\\TodoList\\TodoList.Core\\TodoList.Core.csproj",
+        "projectName": "TodoList.Core",
+        "projectPath": "C:\\Users\\nafs2\\Documents\\Git\\TodoListt\\TodoList\\TodoList.Core\\TodoList.Core.csproj",
+        "packagesPath": "C:\\Users\\nafs2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nafs2\\Documents\\Git\\TodoListt\\TodoList\\TodoList.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nafs2\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +180,22 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
