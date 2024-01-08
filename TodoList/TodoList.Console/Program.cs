@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TodoList.Core.Context;
 using TodoList.Core.Enum;
+using TodoList.Core.Entities;
 
 public class ConsoleProgram
 {
@@ -28,6 +29,7 @@ public class ConsoleProgram
         {
             ExibirMenu();
             Enum.TryParse(Console.ReadLine(), true, out OpcaoMenuEnum opcao);
+            ProcessarEscolha(opcao, context);
         }
         
         
@@ -47,4 +49,24 @@ public class ConsoleProgram
 
         Console.WriteLine(new string('=', 30));
     }
+
+    internal static void ProcessarEscolha(OpcaoMenuEnum opcao, TodoListContext context)
+    {
+        switch (opcao)
+        {
+            case OpcaoMenuEnum.Add:
+                AdicionarTarefa(context);
+                break;
+        }
+    }
+
+    internal static void AdicionarTarefa(TodoListContext context)
+    {
+        Console.WriteLine("Descrição: ");
+        string descricao = Console.ReadLine();
+
+        context.TodoItems.Add(new TodoItem(descricao));
+        context.SaveChanges();
+    }
+
 }
