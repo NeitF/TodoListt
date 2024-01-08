@@ -67,6 +67,9 @@ public class ConsoleProgram
             case OpcaoMenuEnum.MarcarComoCompletado:
                 MarcarComoCompletado(context);
                 break;
+            case OpcaoMenuEnum.VerTodos:
+                VerTodasAsTarefas(context);
+                break;
         }
     }
 
@@ -137,5 +140,11 @@ public class ConsoleProgram
         context.SaveChanges();
     }
 
+    internal static void VerTodasAsTarefas(TodoListContext context)
+    {
+        var todosOsItens = context.TodoItems.ToList();
 
+        foreach (var item in todosOsItens)
+            Console.WriteLine($"========\n{item.Id}\n{item.Descricao}\n{item.IsCompleto}\n========");
+    }
 }
