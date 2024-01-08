@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using TodoList.Core.Context;
 using TodoList.Core.Enum;
 using TodoList.Core.Entities;
+using System.Runtime.InteropServices;
 
 public class ConsoleProgram
 {
@@ -22,12 +23,12 @@ public class ConsoleProgram
         var serviceProvider = services.BuildServiceProvider(); 
         var context = serviceProvider.GetService<TodoListContext>();
         
-        Console.WriteLine($"Sistema operacional: {{RuntimeInformation.OSDescription}}");
+        Console.WriteLine($"Sistema Operacional: {RuntimeInformation.OSDescription}");
         Console.WriteLine("Lista de tarefas a fazer\n");
 
         while (true)
         {
-            //Console.Clear();
+            Console.Clear();
             ExibirMenu();
             Enum.TryParse(Console.ReadLine(), true, out OpcaoMenuEnum opcao);
             ProcessarEscolha(opcao, context);
@@ -45,8 +46,7 @@ public class ConsoleProgram
                           "3 - Editar tarefa\n" +
                           "4 - Marcar tarefa como completa\n" +
                           "5 - Ver todas as tarefas\n" +
-                          "6 - Buscar tarefa por Id\n" +
-                          "7 - Sair");
+                          "6 - Sair");
 
         Console.WriteLine(new string('=', 30));
     }
@@ -70,7 +70,13 @@ public class ConsoleProgram
             case OpcaoMenuEnum.VerTodos:
                 VerTodasAsTarefas(context);
                 break;
+            case OpcaoMenuEnum.Sair:
+                Environment.Exit(0);
+                break;
         }
+
+        Console.WriteLine("Precisone ENTER para continuar");
+        Console.ReadLine();
     }
 
     internal static void AdicionarTarefa(TodoListContext context)
@@ -95,6 +101,7 @@ public class ConsoleProgram
         }
 
         context.TodoItems.Remove(itemEncontrado);
+        context.SaveChanges();
     }
 
     internal static void EditarTarefa(TodoListContext context)

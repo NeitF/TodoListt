@@ -62,7 +62,7 @@ public class TodolistController : ControllerBase
         return Ok(item);
     }
 
-    [HttpDelete]
+    [HttpDelete("{id}")]
     public IActionResult DeleteItem(int id)
     {
         var itemEncontrado = _context.TodoItems.Find(id);
@@ -71,6 +71,8 @@ public class TodolistController : ControllerBase
             return NotFound();
 
         _context.TodoItems.Remove(itemEncontrado);
+        _context.SaveChanges();
+
         return NoContent();
     }
 }

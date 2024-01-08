@@ -13,7 +13,6 @@ namespace TodoList.Core.Enum
         Alterar,
         MarcarComoCompletado,
         VerTodos,
-        VerUm,
         Sair
     }
 }
