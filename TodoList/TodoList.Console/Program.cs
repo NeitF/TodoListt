@@ -61,6 +61,9 @@ public class ConsoleProgram
             case OpcaoMenuEnum.Remover:
                 RemoverTarefa(context);
                 break;
+            case OpcaoMenuEnum.Alterar:
+                EditarTarefa(context);
+                break;
         }
     }
 
@@ -86,6 +89,32 @@ public class ConsoleProgram
         }
 
         context.TodoItems.Remove(itemEncontrado);
+    }
+
+    internal static void EditarTarefa(TodoListContext context)
+    {
+        Console.Write("Id: ");
+        int.TryParse(Console.ReadLine(), out int id);
+
+        var itemEncontrado = context.TodoItems.Find(id);
+        if (itemEncontrado == null)
+        {
+            Console.WriteLine("Não foi encontrado nenhum item com o ID informado");
+            return;
+        }
+
+        Console.Write("Descrição: ");
+        itemEncontrado.Descricao = Console.ReadLine();
+        Console.Write("Completo [s/n]?");
+        char.TryParse(Console.ReadLine(), out char completo);
+
+        if (completo == 's')
+            itemEncontrado.IsCompleto = true;
+        else
+            itemEncontrado.IsCompleto = false;
+
+        context.TodoItems.Update(itemEncontrado);
+        context.SaveChanges();
     }
 
 }
