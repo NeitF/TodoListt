@@ -64,6 +64,9 @@ public class ConsoleProgram
             case OpcaoMenuEnum.Alterar:
                 EditarTarefa(context);
                 break;
+            case OpcaoMenuEnum.MarcarComoCompletado:
+                MarcarComoCompletado(context);
+                break;
         }
     }
 
@@ -116,5 +119,23 @@ public class ConsoleProgram
         context.TodoItems.Update(itemEncontrado);
         context.SaveChanges();
     }
+
+    internal static void MarcarComoCompletado(TodoListContext context)
+    {
+        Console.Write("Id: ");
+        int.TryParse(Console.ReadLine(), out int id);
+
+        var itemEncontrado = context.TodoItems.Find(id);
+        if (itemEncontrado == null)
+        {
+            Console.WriteLine("Não foi encontrado nenhum item com o ID informado");
+            return;
+        }
+
+        itemEncontrado.IsCompleto = true;
+        context.TodoItems.Update(itemEncontrado);
+        context.SaveChanges();
+    }
+
 
 }
